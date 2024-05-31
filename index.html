@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ular</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 flex flex-col items-center justify-center h-screen">
+    <div class="text-white text-2xl mb-4">Skor: <span id="score">0</span></div>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="controls mt-4 grid grid-cols-3 gap-2">
+        <button id="up" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded col-span-3">Atas</button>
+        <button id="left" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Kiri</button>
+        <button id="down" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Bawah</button>
+        <button id="right" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Kanan</button>
+    </div>
+    <div id="gameOverModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg text-center">
+            <h2 class="text-2xl mb-4">Game Berakhir</h2>
+            <p class="text-lg">Skor Anda: <span id="finalScore">0</span></p>
+            <button id="restartBtn" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Restart</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="text-white mt-4">Made with ❤️ by Fatih</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
